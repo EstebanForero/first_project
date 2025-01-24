@@ -1,4 +1,3 @@
-import React from "react"
 import MainPage from "../components/MainPage"
 import RegisterComponent from "../components/RegisterComponent"
 import SearchPage from "../components/SearchPage"
