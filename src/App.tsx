@@ -1,8 +1,9 @@
 import { useState } from "react"
+import { Pages } from './data/pages'
 
 function App() {
 
-  const [page, setPage] = useState<Page>(second)
+  const [page, setPage] = useState<Pages>('Main')
 
   return (
     <div className="bg-gray-800 w-full h-screen p-4">
