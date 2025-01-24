@@ -27,7 +27,7 @@ const RegisterComponent = () => {
     e.preventDefault();
     console.log("Datos enviados:", formData);
 
-    // Si tienes un backend, puedes enviar los datos aquí
+    // envair datos aca si hacemos backend
     // fetch("URL_DEL_BACKEND", {
     //   method: "POST",
     //   headers: { "Content-Type": "application/json" },
