@@ -1,7 +1,14 @@
 
 import { useState } from "react";
+import { Pages } from "../data/pages";
 
-const RegisterComponent = () => {
+type Props = {
+  onChangePage: (page: Pages) => void
+}
+
+const RegisterComponent = (props: Props) => {
+
+  props.onChangePage("")
   // Estado para manejar los datos del formulario
   const [formData, setFormData] = useState({
     fullName: "",
