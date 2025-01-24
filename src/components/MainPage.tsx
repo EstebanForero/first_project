@@ -1,26 +1,21 @@
+import { Pages } from '../data/pages'
 
-import React from 'react'
+type Props = {
+  onChangePage: (page: Pages) => void
+}
 
-import { useNavigate } from 'react-router-dom';  
+const MainPage = ({ onChangePage }: Props) => {
 
-const MainPage = () => {
-  const navigate = useNavigate();
-  const handleInscription = () => {
-        navigate('/register');
-    };
-    const handleSearch = () => {
-        navigate('/register');
-    };
   return (
     <div className='main-container'>
-      <h1>Sabana Club</h1>
-      <p>Este es el club de tennis Sabana</p>
-      <div>
-        <button onClick={handleInscription} className="btn-inscribir">Inscribir</button>
-        <button onClick={handleSearch} className="btn-inscribir">Buscar</button>
+      <h1 className='text-white'>Sabana Club</h1>
+      <p className='text-white'>Este es el club de tennis Sabana</p>
+      <div className='flex flex-row gap-4'>
+        <button onClick={() => onChangePage('Register')} className="btn-inscribir text-white bg-gray-950 p-4 rounded-xl">Inscribir</button>
+        <button onClick={() => onChangePage('Search')} className="btn-inscribir text-white bg-gray-950 p-4 rounded-xl">Buscar</button>
       </div>
     </div>
-    
+
   )
 }
 
