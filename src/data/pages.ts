@@ -1,10 +1,19 @@
 import React from "react"
+import MainPage from "../components/MainPage"
+import RegisterComponent from "../components/RegisterComponent"
+import SearchPage from "../components/SearchPage"
 
 
-export type Pages = 'Main' | 'Register' | 'Logging'
+export type Pages = 'Main' | 'Register' | 'Search'
 
-function getPageComponent(currentPage: Pages): React.Component {
+export function getPageComponent(currentPage: Pages): JSX.Element {
   if (currentPage == 'Main') {
-    return
+    return MainPage()
+  } else if (currentPage == 'Register') {
+    return RegisterComponent()
+  } else if (currentPage == 'Search') {
+    return SearchPage()
   }
+
+  return MainPage()
 }
